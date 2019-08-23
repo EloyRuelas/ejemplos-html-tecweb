@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Form Example</title>
-    </head>
 
-    <body>
-        <h1>Register</h1>
+<head>
+    <title>Form Example</title>
+</head>
 
-        <form method="GET">
-        <label for="first-name">First Name:</label>
-        <input type="text" name="first-name" id="first-name">
+<body>
+    <h1>Register</h1>
+
+    <form method="GET">
+        <label for="first-name">First Name:*</label>
+        <input type="text" name="first-name" id="first-name" required placeholder="your first name">
         <label for="last-name">Last Name:</label>
-        <input type="text" name="last-name" id="last-name">
+        <input type="text" name="last-name" id="last-name" placeholder="your last name">
 
         <div>
             <label for="male">Male:</label>
@@ -24,22 +25,67 @@
 
         <div>
             <label for="email">Email</label>
-            <input type="email" id="email">
+            <input type="email" id="email" placeholder="your email">
 
-            <label for="pass">Password</label>
-            <input type="password" name="password" id="pass">
+            <label for="pass">Password:*</label>
+            <input type="password" name="password" id="pass" required placeholder="At least 8 Characters" minlength="4">
         </div>
+
+        <div>
+            <label>Birthday</label>
+            <select name="month">
+                <option>Month</option>
+                <option>------</option>
+                <option value="1">Jan</option>
+                <option value="2">Feb</option>
+                <option value="3">Mar</option>
+                <option value="4">Apr</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>Jul</option>
+                <option>Aug</option>
+                <option>Sep</option>
+                <option>Oct</option>
+                <option>Nov</option>
+                <option>Dic</option>
+            </select>
+            <select name="day">
+                <option>Day</option>
+                <option>------</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <select name="year">
+                <option>Year</option>
+                <option>------</option>
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="terms">* I agree to terms and conditions</label>
+            <input type="checkbox" id="terms" required>
+        </div>
+        <p style="color: red">
+            * This field is Required
+        </p>
 
         <!--Boton para enviar la informacion-->
 
         <input type="submit" value="Submit">
     </form>
-        <a href="index.html">Inicio</a>
-        <p>
-            <a href="https://validator.w3.org/check?uri=referer"><img
-                src="http://www.w3.org/Icons/valid-xhtml10"
+    <a href="index.html">Inicio</a>
+    <p>
+        <a href="https://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml10"
                 alt="Valid XHTML 1.0!" height="31" width="88" />
-            </a>
-        </p>
-    </body>
+        </a>
+    </p>
+</body>
+
 </html>
